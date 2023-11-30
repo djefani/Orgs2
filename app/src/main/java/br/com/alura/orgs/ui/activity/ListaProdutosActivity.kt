@@ -22,13 +22,7 @@ class ListaProdutosActivity : AppCompatActivity() {
         setContentView(binding.root)
         configuraRecyclerView()
         configuraFab()
-        AlertDialog.Builder(this)
-            .setTitle("Titulo de teste")
-            .setMessage("teste!")
-            .setView(R.layout.activity_formulario_produto)
-            .setPositiveButton("Confirmar"){_, _->}
-            .setNegativeButton("Cancelar"){ _, _ ->}
-            .show()
+
     }
 
     override fun onResume() {
