@@ -2,9 +2,12 @@ package br.com.alura.orgs.ui.recyclerview.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import br.com.alura.orgs.R
 import br.com.alura.orgs.databinding.ProdutoItemBinding
+import br.com.alura.orgs.extensions.tentaCarregarImagem
 import br.com.alura.orgs.model.Produto
 import coil.load
 import java.text.NumberFormat
@@ -28,7 +31,16 @@ class ListaProdutosAdapter(
             val valor = binding.produtoItemValor
             val valorEmMoeda: String = formataParaMoedaBrasileira(produto)
             valor.text = valorEmMoeda
-            binding.imageView.load(produto.imagem)
+
+            val visibilidade = if (produto.imagem != null) {
+                View.VISIBLE
+            } else {
+                View.GONE
+            }
+            binding.imageView.visibility = visibilidade
+
+
+            binding.imageView.tentaCarregarImagem(produto.imagem)
         }
 
         private fun formataParaMoedaBrasileira(produto: Produto): String {
