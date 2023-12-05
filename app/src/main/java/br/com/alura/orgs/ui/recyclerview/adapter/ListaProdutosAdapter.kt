@@ -16,7 +16,7 @@ import java.util.Locale
 
 class ListaProdutosAdapter(
     private val context: Context,
-    produtos: List<Produto>, var quandoClicaNoItem:(produto: Produto) -> Unit = {}
+    produtos: List<Produto> = emptyList(), var quandoClicaNoItem:(produto: Produto) -> Unit = {}
 ) : RecyclerView.Adapter<ListaProdutosAdapter.ViewHolder>() {
 
     private val produtos = produtos.toMutableList()

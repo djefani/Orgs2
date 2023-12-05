@@ -1,7 +1,7 @@
 package br.com.alura.orgs.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import br.com.alura.orgs.databinding.ActivityDetalhesProdutosBinding
 import br.com.alura.orgs.extensions.formataParaMoedaBrasileira
 import br.com.alura.orgs.extensions.tentaCarregarImagem
